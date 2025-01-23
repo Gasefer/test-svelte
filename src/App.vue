@@ -1,6 +1,17 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 
+// Інтерфейс для типізації даних погоди
+interface WeatherData {
+  name: string
+  main: {
+    temp: number
+  }
+  weather: {
+    description: string
+  }[]
+}
+
 const API_KEY = 'e5aca9055b94aef4964cd9e9b71f7890'
 const cityArray = [
   'Kyiv',
@@ -13,7 +24,7 @@ const cityArray = [
   'Ivano-Frankivsk',
 ]
 const city = ref(localStorage.getItem('selectedCity') || 'Kyiv')
-const weather = ref(null)
+const weather = ref<WeatherData | null>(null) // Визначення типу для weather
 const history = ref<string[]>(JSON.parse(localStorage.getItem('cityHistory') || '[]'))
 
 const fetchWeather = async () => {
