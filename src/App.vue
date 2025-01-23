@@ -101,7 +101,7 @@ fetchWeather()
     max-width: 600px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    margin: 200px 0px auto 0px;
+    margin: 100px 0px auto 0px;
   }
   &-title {
     text-align: center;
