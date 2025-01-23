@@ -94,6 +94,7 @@ fetchWeather()
   align-items: flex-start;
   color: #b6b6b6;
   height: 100lvh;
+  padding: 0;
 }
 .weather {
   &-container {
@@ -101,7 +102,7 @@ fetchWeather()
     max-width: 600px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    margin: 100px 0px auto 0px;
+    margin: 50px 0px auto 0px;
   }
   &-title {
     text-align: center;
